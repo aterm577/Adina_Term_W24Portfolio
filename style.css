@@ -273,6 +273,7 @@ section {
 
 #about {
   position: relative;
+  margin-top: -2.5rem
 }
 
 .about-containers {
@@ -290,19 +291,43 @@ section {
 .about-details-container {
   display: flex;
 }
+.curved-underline {
+  position: relative;
+  display: inline-block;
+}
 
+.curved-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust this value to control the distance between text and underline */
+  width: 100%;
+  height: 3px; /* Adjust this value to control the thickness of the underline */
+  background-color: #F8A7DC; /* Change this color to set the color of the underline */
+  border-radius: 70%; /* Makes the line curved */
+}
 
+.introduction{
+  color: black;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+.bodyparagraph{
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
 .text-container {
-  margin-top: 2rem; 
+  margin-top: 3.5rem; 
 }
 
 #about img{
   margin-right: 4.5rem;
 }
 .arrow {
-  position: absolute;
-  right: 22.5rem;
-  bottom: -1.5rem;
+  position: absolute; /* Position the arrow relative to the profile section */
+  left: 50%; /* Position the arrow at the horizontal center of its containing block */
+  transform: translateX(-50%);
+  bottom: 1.4rem;
 }
 
 .details-container {
@@ -314,11 +339,16 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
-
-.quote {
-  margin-bottom: 20px; /* Adjust the margin-bottom as needed */
+.quote{
+  color: black;
+  font-size: 1.05rem;
 }
-
+.author {
+  color: black;
+  font-size: 1.05rem;
+  margin-left:21rem;
+  margin-bottom: 15px;
+}
 .section-container {
   gap: 4rem;
   height: 80%;
@@ -326,8 +356,8 @@ section {
 }
 
 .section__pic-container {
-  height: 490px;
-  width: 490px;
+  height: 480px;
+  width: 480px;
   margin: auto 0;
 }
 
@@ -336,6 +366,7 @@ section {
 
 #highlights {
   position: relative;
+  margin-top: 5rem;
 }
 
 .experience-sub-title {
