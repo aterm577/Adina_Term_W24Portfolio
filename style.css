@@ -61,6 +61,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .logo:hover {
@@ -166,10 +167,6 @@ section {
 #profile {
   display: flex;
   justify-content: center;
-  margin-top: -4rem;
-  border-radius: 50%;
-  margin-right: 4rem;
-  position: relative;
 }
 
 .section__pic-container {
@@ -181,11 +178,9 @@ section {
 
 #profile .arrow {
   position: absolute; /* Position the arrow relative to the profile section */
-  top: 99%; /* Align the arrow vertically in the middle */
-  right: 33rem; /* Adjust the distance from the right side */
-  transform: translateY(-50%); /* Center the arrow vertically */
-  transition: right 0.3s ease;
-  cursor: pointer;
+  left: 50%; /* Position the arrow at the horizontal center of its containing block */
+  transform: translateX(-50%);
+  bottom: 2.8rem;
 }
 
 
@@ -296,14 +291,18 @@ section {
   display: flex;
 }
 
-.about-pic {
-  border-radius: 2rem;
+
+.text-container {
+  margin-top: 2rem; 
 }
 
+#about img{
+  margin-right: 4.5rem;
+}
 .arrow {
   position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+  right: 22.5rem;
+  bottom: -1.5rem;
 }
 
 .details-container {
@@ -316,20 +315,26 @@ section {
   text-align: center;
 }
 
+.quote {
+  margin-bottom: 20px; /* Adjust the margin-bottom as needed */
+}
+
 .section-container {
   gap: 4rem;
   height: 80%;
+  width: 109%;
 }
 
 .section__pic-container {
-  height: 400px;
-  width: 400px;
+  height: 490px;
+  width: 490px;
   margin: auto 0;
 }
 
+
 /* EXPERIENCE SECTION */
 
-#experience {
+#highlights {
   position: relative;
 }
 
