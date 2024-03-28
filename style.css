@@ -16,7 +16,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: #555555;
 }
 
 /* TRANSITION */
@@ -169,6 +169,7 @@ section {
   justify-content: center;
 }
 
+
 .section__pic-container {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -273,7 +274,8 @@ section {
 
 #about {
   position: relative;
-  margin-top: -2.5rem
+  margin-top: -2.5rem;
+  height: 96vh;
 }
 
 .about-containers {
@@ -360,13 +362,22 @@ section {
   width: 480px;
   margin: auto 0;
 }
+.pic-container {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 1rem;
 
+}
 
 /* EXPERIENCE SECTION */
 
 #highlights {
   position: relative;
   margin-top: 5rem;
+  justify-content: center;
 }
 
 .experience-sub-title {
@@ -406,6 +417,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-top: 5rem;
 }
 
 .color-container {
