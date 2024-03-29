@@ -279,10 +279,21 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
+      <div class="projects-container">
+        <ul class="projects-list">
+          <li class="project" onclick="toggleProjectDescription(this, 1, 600, 600)">
+            <span class="curved-underline">SpringSocial - Microservices-Based Social Media Platform</span></li>
+          <li class="project" onclick="toggleProjectDescription(this, 2)">
+            <span class="curved-underline">Retail Employee Discount Calculator</span></li>
+          <li class="project" onclick="toggleProjectDescription(this, 3)">
+            <span class="curved-underline">Employee Management System</span></li>
+          <li class="project" onclick="toggleProjectDescription(this, 4)">
+            <span class="curved-underline">Personal Dictionary and Spellcheck Program</span></li>
+          <li class="project" onclick="toggleProjectDescription(this, 5)">
+            <span class="curved-underline">Employee Shift Managment - Capstone Project</span></li>
+        </ul>
+      </div>
+           <!--<div class="article-container">
               <img
                 src="./assets/project-1.png"
                 alt="Project 1"
@@ -351,10 +362,7 @@
               >
                 Live Demo
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div>-->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
