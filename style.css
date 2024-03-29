@@ -364,12 +364,11 @@ section {
 }
 .pic-container {
   height: 500px;
-  width: 500px;
+  width: 240px;
   margin: 0 auto;
   display: flex;
   justify-content: center; /* Center horizontally */
   margin-top: 1rem;
-
 }
 
 /* EXPERIENCE SECTION */
