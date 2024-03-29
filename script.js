@@ -5,49 +5,21 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-function toggleProjectDescription(element, projectId, width, height) {
-  var description = document.getElementById("project-description-" + projectId);
-  var isOpen = description && description.style.display !== "none";
+function openProjectModal(projectId) {
+  var modal = document.getElementById('project-modal');
+  var title = document.getElementById('project-title');
+  var description = document.getElementById('project-description');
+  var image = document.getElementById('project-image');
 
-  // Close all project descriptions except the clicked one
-  var allDescriptions = document.querySelectorAll('.project-description');
-  allDescriptions.forEach(function(desc) {
-      if (desc !== description) {
-          desc.style.display = 'none';
-      }
-  });
+  // Set project details
+  title.textContent = "Project Title " + projectId;
+  description.querySelector('p').textContent = "Description of Project " + projectId + ". Lorem ipsum dolor sit amet.";
+  image.src = "./assets/project-" + projectId + ".png"; // Replace with the actual image path
 
-  // Toggle the display of the clicked project description
-  if (!isOpen && description) {
-      description.style.display = "block";
-  } else if (description) {
-      description.style.display = "none";
-  } else {
-      // If description doesn't exist, create it
-      var newDescription = document.createElement("div");
-      newDescription.id = "project-description-" + projectId;
-      newDescription.className = "project-description";
+  modal.style.display = 'block';
+}
 
-      // Create and append project image
-      var projectImage = document.createElement("img");
-      projectImage.src = "./assets/project-" + projectId + ".png"; // Corrected image path
-      projectImage.alt = "Project " + projectId;
-      projectImage.className = "project-image";
-
-      // Set custom width and height
-      if (width && height) {
-        projectImage.style.width = width + "px";
-        projectImage.style.height = height + "px";
-      }
-
-      newDescription.appendChild(projectImage);
-
-      // Create and append project description
-      var projectDescription = document.createElement("p");
-      projectDescription.textContent = "Description of Project " + projectId + ". Lorem ipsum dolor sit amet.";
-      newDescription.appendChild(projectDescription);
-
-      // Append the description to the DOM
-      element.parentNode.insertBefore(newDescription, element.nextSibling);
-  }
+function closeProjectModal() {
+  var modal = document.getElementById('project-modal');
+  modal.style.display = 'none';
 }

@@ -281,88 +281,45 @@
       <h1 class="title">Projects</h1>
       <div class="projects-container">
         <ul class="projects-list">
-          <li class="project" onclick="toggleProjectDescription(this, 1, 600, 600)">
-            <span class="curved-underline">SpringSocial - Microservices-Based Social Media Platform</span></li>
-          <li class="project" onclick="toggleProjectDescription(this, 2)">
-            <span class="curved-underline">Retail Employee Discount Calculator</span></li>
-          <li class="project" onclick="toggleProjectDescription(this, 3)">
-            <span class="curved-underline">Employee Management System</span></li>
-          <li class="project" onclick="toggleProjectDescription(this, 4)">
-            <span class="curved-underline">Personal Dictionary and Spellcheck Program</span></li>
-          <li class="project" onclick="toggleProjectDescription(this, 5)">
-            <span class="curved-underline">Employee Shift Managment - Capstone Project</span></li>
+          <li class="project" onclick="openProjectModal(1)">
+            <div class="project-overlay">
+              <p class="project-title">Microservices-Based Social Media Platform</p>
+            </div>
+            <img src="./assets/project-1.png" alt="Project 1" class="project-image">
+          </li>
+          <li class="project">
+            <div class="project-overlay">
+              <p class="project-title">Retail Employee Discount Calculator</p>
+            </div>
+            <img src="./assets/project-2.png" alt="Project 2" class="project-image">
+          </li>
+          <li class="project">
+            <div class="project-overlay">
+              <p class="project-title">Employee Management System</p>
+            </div>
+            <img src="./assets/project-3.png" alt="Project 3" class="project-image">
+          </li>
+          <li class="project">
+            <div class="project-overlay">
+              <p class="project-title">Personal Dictionary & Spellcheck Program </p>
+            </div>
+            <img src="./assets/project-4.png" alt="Project 4" class="project-image">
+          </li>
+          <li class="project">
+            <div class="project-overlay">
+              <p class="project-title">Employee Shift Management Capstone Project</p>
+            </div>
+            <img src="./assets/project-5.png" alt="Project 5" class="project-image">
+          </li>
+          <li class="project">
+            <div class="project-overlay">
+              <p class="project-title">Shop Calc Tax</p>
+            </div>
+            <img src="./assets/project-6.png" alt="Project 6" class="project-image">
+          </li>
         </ul>
       </div>
-           <!--<div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>-->
+
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -370,6 +327,18 @@
         onclick="location.href='./#contact'"
       />
     </section>
+    <!-- Project Modal -->
+<div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProjectModal()">&times;</span>
+    <h2 id="project-title">Project Title</h2>
+    <div id="project-description" class="project-description">
+      <img id="project-image" src="#" alt="Project Image">
+      <p>Description of the project goes here.</p>
+    </div>
+    <!-- Add more project details as needed -->
+  </div>
+</div>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
